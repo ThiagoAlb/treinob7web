@@ -226,7 +226,9 @@ console.log(`${pct}% de ${x} é ${y} `);
  - Se tiver três quarto, o m2 é 1.3x
  */
 
-calcularImovel(metragem, quartos) {
+let metragem = 123;
+let quartos = 3;
+function calcularImovel(metragem, quartos) {
     let m2 = 3000;
     switch(quartos){
         case 1:
@@ -241,7 +243,134 @@ calcularImovel(metragem, quartos) {
     }
 };
 
-let metragem = 123;
-let quartos = 3;
-let preco = calcularImovel(metragem, quarto);
+
+let preco = calcularImovel(metragem, quartos);
 console.log(`A casa custa ${preco}.`);
+
+//Exercícios de declaração de funções
+function dizerOla() {
+    return console.log('Olá, mundo!');
+}
+
+dizerOla();
+
+function mostrarNome(){
+    return console.log('Thiago Vasconcelos');
+}
+mostrarNome();
+
+function mensagemBoasVindas() {
+    return console.log('Bem-vindo ao nosso site.');
+}
+mensagemBoasVindas();
+
+function mostrarDataAtual() {
+    return console.log(`${new Date().toLocaleDateString()} -> data em padrão americano.`);
+}
+mostrarDataAtual();
+
+function linhaSeparadora() {
+    return console.log('------------------------------');
+}
+linhaSeparadora();
+
+function saudarUsuario(nome) {
+    return console.log(`Olá, ${nome}.`);
+}
+saudarUsuario('Thiago');
+
+function soma(a, b) {
+    return console.log(a + b);
+}
+soma(5,15);
+
+function multiplicar(x, y) {
+    console.log(`${x * y}`);
+}
+multiplicar(5, 15);
+
+function mostrarIdade(nome, idade) {
+    return console.log(`${nome} tem ${idade} anos.`);
+}
+mostrarIdade('Thiago', 33);
+
+function converterParaReais(valorDolar, cotacao) {
+    return console.log(`O valor em doláres foi R$ ${valorDolar} e a cotação está em R$ ${cotacao}. O valor em reais é igual a R$ ${valorDolar * cotacao}.`);
+}
+
+converterParaReais(10, 6.1);
+
+function ehPar(numero){
+    if(numero % 2 == 0) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(ehPar(2));
+
+function classificarNota(nota) {
+    if (nota >= 7) {
+        return console.log('Aprovado.');
+    } else {
+        return console.log('Reprovado.');
+    }
+}
+classificarNota(7);
+
+function maioridade(idade) {
+    if(idade >= 18) {
+        return console.log('Maior de idade.');
+    } else {
+        return console.log('Menor de idade.');
+    }
+}
+
+maioridade(17);
+
+function verificarLogin(usuario, senha) {
+    if(usuario === 'admin' && senha === 1234) {
+        return console.log(true);
+    } else {
+        return console.log(false);
+    }
+}
+
+verificarLogin('admin', 12345);
+
+function avaliarTemperatura(temp) {
+    if (temp > 30) {
+        return console.log('Está quente.');
+    } else if(temp < 18) {
+        return console.log('Está frio.');
+    } else {
+        return console.log('Temperatura agradável.');
+    }
+}
+
+avaliarTemperatura(26)
+
+
+let produtos = [
+    {nome: 'Camisa', preco: 19.90},
+    {nome: 'Bermuda', preco: 59.90},
+    {nome: 'Sapato', preco: 89.90},
+    {nome: 'Oculos', preco: 59.90}
+ ];
+ 
+ let total = 0;
+ for(let produto of produtos) {
+    console.log(`Produto: ${produto.nome} - Preço: ${produto.preco}`);
+    total = total + produto.preco;
+ }
+ console.log(`Total = ${total}`);
+
+
+ function calcularPreco (preco, desconto) {
+    return valorFinal = preco * (1- (desconto / 100));
+     
+ };
+
+ let precoComDesconto = calcularPreco(100, 10);
+ console.log(`Preço final: R$ ${precoComDesconto}`);
+ 
